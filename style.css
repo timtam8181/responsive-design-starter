@@ -1,3 +1,10 @@
+* {
+  box-sizing: border;
+  margin: 0;
+  padding: 0
+
+}
+
 article {
   display: flex;
   flex-wrap: wrap;
@@ -5,7 +12,7 @@ article {
 
 article > * {
   width: 100%;
-  height: 300px;
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +23,7 @@ article > * {
 
 nav {
   background-color: #5995DA;
-  height: 80px;
+  min-height: 10vh;
 }
 
 header {
@@ -25,7 +32,7 @@ header {
 
 main {
   background-color: #EAEDF0;
-  height: 600px;
+  height: 50vh;
 }
 
 #sign-up {
@@ -42,4 +49,28 @@ main {
 
 #feature-3 {
   background-color: #C8C6FA;
+}
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  section {
+    width: 50vw;
+    min-height: 50vw;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+header {
+  min-height: 30vh;
+}
+#feature-1, #feature-2, #feature-3 {
+  flex: 1;
+  min-height: 45vw
+}
+#sign-up {
+  order: 1
+}
+main {
+  order: 2
+}
 }
